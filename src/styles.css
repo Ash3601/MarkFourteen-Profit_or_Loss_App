@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --primary: #121212;
+  --color: #03dac5;
+  --button-bg: rgb(77, 77, 77);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: var(--color);
+  background-color: var(--primary);
+}
+
+.App {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+header {
+  margin: 2rem 0;
+}
+
+header h1 {
+  margin: 1rem 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 3rem 0 1rem 0;
+}
+
+.wrapper {
+  flex: 1;
+  margin: 0 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+input,
+button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 15rem;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+/* button {
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+} */
+
+button {
+  position: relative;
+  background-color: #999;
+  /* color: #e6877a */
+  border: none;
+  font-size: 1.2rem;
+  color: #ffffff;
+  /* padding: 20px; */
+  width: 240px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button:after {
+  content: "";
+  background: #90ee90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+button:focus {
+  color: white;
+  background: #04aa6d;
+}
+
+.stocks {
+  flex: 1;
+  width: 25rem;
+  height: auto;
+  margin: 0 2rem;
+}
+
+footer {
+  margin-top: auto;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+footer a,
+header a {
+  color: inherit;
+}
+
+@media (max-width: 992px) {
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .wrapper {
+    margin: 2rem 0;
+  }
+
+  .stocks {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  input,
+  button {
+    width: 12rem;
+  }
+  .stocks {
+    width: 15rem;
+  }
+}
